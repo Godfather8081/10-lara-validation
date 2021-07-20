@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\SeccondController;
+use App\Http\Controllers\ThirdController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('first', [FirstController::class, 'firstReq']);
 Route::post('seccond', [SeccondController::class, 'store']);
+Route::get('third/{id}/{name}', [ThirdController::class, 'add']);
